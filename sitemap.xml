@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wwww.jeremywen.com/2024/06/28/20240628_1/</loc>
+    
+    <lastmod>2024-06-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://wwww.jeremywen.com/2024/06/28/Test/</loc>
     
     <lastmod>2024-06-28</lastmod>
@@ -47,15 +56,6 @@
   </url>
   
   <url>
-    <loc>http://wwww.jeremywen.com/2024/06/28/20240628_1/</loc>
-    
-    <lastmod>2024-06-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://wwww.jeremywen.com/2024/06/28/186/</loc>
     
     <lastmod>2024-06-28</lastmod>
@@ -83,6 +83,20 @@
 
   
   <url>
+    <loc>http://wwww.jeremywen.com/tags/Life/</loc>
+    <lastmod>2024-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://wwww.jeremywen.com/tags/Health/</loc>
+    <lastmod>2024-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://wwww.jeremywen.com/tags/%E9%AB%98%E9%9B%84%E7%BE%8E%E9%A3%9F/</loc>
     <lastmod>2024-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -98,20 +112,6 @@
   
   <url>
     <loc>http://wwww.jeremywen.com/tags/Food/</loc>
-    <lastmod>2024-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://wwww.jeremywen.com/tags/Life/</loc>
-    <lastmod>2024-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://wwww.jeremywen.com/tags/Health/</loc>
     <lastmod>2024-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -134,14 +134,14 @@
 
   
   <url>
-    <loc>http://wwww.jeremywen.com/categories/%E5%90%83%E9%81%8E%E7%9A%84%E9%A3%9F%E7%89%A9/</loc>
+    <loc>http://wwww.jeremywen.com/categories/%E9%81%8B%E5%8B%95%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2024-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://wwww.jeremywen.com/categories/%E9%81%8B%E5%8B%95%E7%94%9F%E6%B4%BB/</loc>
+    <loc>http://wwww.jeremywen.com/categories/%E5%90%83%E9%81%8E%E7%9A%84%E9%A3%9F%E7%89%A9/</loc>
     <lastmod>2024-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
