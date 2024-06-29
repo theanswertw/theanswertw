@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wwww.jeremywen.com/2024/06/29/20240629_koerafood/</loc>
+    
+    <lastmod>2024-06-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://wwww.jeremywen.com/2024/06/28/20240628_1/</loc>
     
     <lastmod>2024-06-28</lastmod>
@@ -76,7 +85,7 @@
 
   <url>
     <loc>http://wwww.jeremywen.com/</loc>
-    <lastmod>2024-06-28</lastmod>
+    <lastmod>2024-06-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -84,49 +93,63 @@
   
   <url>
     <loc>http://wwww.jeremywen.com/tags/Life/</loc>
-    <lastmod>2024-06-28</lastmod>
+    <lastmod>2024-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://wwww.jeremywen.com/tags/Health/</loc>
-    <lastmod>2024-06-28</lastmod>
+    <lastmod>2024-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://wwww.jeremywen.com/tags/%E9%AB%98%E9%9B%84%E7%BE%8E%E9%A3%9F/</loc>
-    <lastmod>2024-06-28</lastmod>
+    <lastmod>2024-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://wwww.jeremywen.com/tags/%E9%B3%B3%E5%B1%B1%E7%BE%8E%E9%A3%9F/</loc>
-    <lastmod>2024-06-28</lastmod>
+    <lastmod>2024-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://wwww.jeremywen.com/tags/Food/</loc>
-    <lastmod>2024-06-28</lastmod>
+    <lastmod>2024-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://wwww.jeremywen.com/tags/Photo/</loc>
-    <lastmod>2024-06-28</lastmod>
+    <lastmod>2024-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://wwww.jeremywen.com/tags/%E9%AB%98%E9%9B%84%E6%99%AF%E9%BB%9E/</loc>
-    <lastmod>2024-06-28</lastmod>
+    <lastmod>2024-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://wwww.jeremywen.com/tags/%E5%90%83%E5%88%B0%E9%A3%BD/</loc>
+    <lastmod>2024-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://wwww.jeremywen.com/tags/%E9%9F%93%E5%9C%8B%E7%BE%8E%E9%A3%9F/</loc>
+    <lastmod>2024-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -135,28 +158,28 @@
   
   <url>
     <loc>http://wwww.jeremywen.com/categories/%E9%81%8B%E5%8B%95%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2024-06-28</lastmod>
+    <lastmod>2024-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://wwww.jeremywen.com/categories/%E5%90%83%E9%81%8E%E7%9A%84%E9%A3%9F%E7%89%A9/</loc>
-    <lastmod>2024-06-28</lastmod>
+    <lastmod>2024-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://wwww.jeremywen.com/categories/PHOTOGRAPHY/</loc>
-    <lastmod>2024-06-28</lastmod>
+    <lastmod>2024-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://wwww.jeremywen.com/categories/%E4%BA%BA%E7%94%9F%E5%A4%A7%E9%81%93/</loc>
-    <lastmod>2024-06-28</lastmod>
+    <lastmod>2024-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
