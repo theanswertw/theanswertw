@@ -136,20 +136,6 @@
   </url>
   
   <url>
-    <loc>http://wwww.jeremywen.com/tags/%E9%B3%B3%E5%B1%B1%E7%BE%8E%E9%A3%9F/</loc>
-    <lastmod>2024-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://wwww.jeremywen.com/tags/Food/</loc>
-    <lastmod>2024-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://wwww.jeremywen.com/tags/%E5%90%83%E5%88%B0%E9%A3%BD/</loc>
     <lastmod>2024-06-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -158,6 +144,20 @@
   
   <url>
     <loc>http://wwww.jeremywen.com/tags/%E9%9F%93%E5%9C%8B%E7%BE%8E%E9%A3%9F/</loc>
+    <lastmod>2024-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://wwww.jeremywen.com/tags/%E9%B3%B3%E5%B1%B1%E7%BE%8E%E9%A3%9F/</loc>
+    <lastmod>2024-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://wwww.jeremywen.com/tags/Food/</loc>
     <lastmod>2024-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
