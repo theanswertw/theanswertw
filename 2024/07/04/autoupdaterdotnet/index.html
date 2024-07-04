@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.2.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wwww.jeremywen.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null,"activeClass":"disqus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TZZ5GSM5KC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TZZ5GSM5KC');
+</script>
+    <meta name="description" content="用於軟體自動更新，不再需要使用bat等等之類的方式一個不錯的小套件適合用在不會太龐大的軟體上 AutoUpdater.NET在NuGet上找到 並且安裝他 Autoupdater.NET.Official">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AutoUpdater.NET">
+<meta property="og:url" content="http://wwww.jeremywen.com/2024/07/04/autoupdaterdotnet/index.html">
+<meta property="og:site_name" content="Jeremy&#39;s Life">
+<meta property="og:description" content="用於軟體自動更新，不再需要使用bat等等之類的方式一個不錯的小套件適合用在不會太龐大的軟體上 AutoUpdater.NET在NuGet上找到 並且安裝他 Autoupdater.NET.Official">
+<meta property="og:locale">
+<meta property="article:published_time" content="2024-07-04T01:44:21.000Z">
+<meta property="article:modified_time" content="2024-07-04T01:44:22.004Z">
+<meta property="article:author" content="Jeremy Wen">
+<meta property="article:tag" content="Programing">
+<meta property="article:tag" content="C#">
+<meta property="article:tag" content="Azure">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://wwww.jeremywen.com/2024/07/04/autoupdaterdotnet/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh","comments":true,"permalink":"http://wwww.jeremywen.com/2024/07/04/autoupdaterdotnet/","path":"2024/07/04/autoupdaterdotnet/","title":"AutoUpdater.NET"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>AutoUpdater.NET | Jeremy's Life</title>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TZZ5GSM5KC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TZZ5GSM5KC');
+</script>
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Jeremy's Life</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Jeremy Wen</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="mailto:theanswertw@gmail.com" title="E-Mail → mailto:theanswertw@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://instagram.com/Jeremywen77" title="Instagram → https:&#x2F;&#x2F;instagram.com&#x2F;Jeremywen77" rel="noopener me" target="_blank"><i class="fab fa-instagram fa-fw"></i>Instagram</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh">
+    <link itemprop="mainEntityOfPage" href="http://wwww.jeremywen.com/2024/07/04/autoupdaterdotnet/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jeremy Wen">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jeremy's Life">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="AutoUpdater.NET | Jeremy's Life">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          AutoUpdater.NET
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2024-07-04 09:44:21 / Modified: 09:44:22" itemprop="dateCreated datePublished" datetime="2024-07-04T09:44:21+08:00">2024-07-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Programing/" itemprop="url" rel="index"><span itemprop="name">Programing</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2024/07/04/autoupdaterdotnet/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/07/04/autoupdaterdotnet/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>1 mins.</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>用於軟體自動更新，不再需要使用bat等等之類的方式<br><br>一個不錯的小套件適合用在不會太龐大的軟體上 <a target="_blank" rel="noopener" href="https://github.com/ravibpatel/AutoUpdater.NET" title="AutoUpdater.NET">AutoUpdater.NET</a><br><br>在NuGet上找到 並且安裝他 <a target="_blank" rel="noopener" href="https://www.nuget.org/packages/Autoupdater.NET.Official" title="Autoupdater.NET.Official ">Autoupdater.NET.Official</a><br></p>
+<span id="more"></span>
+
+<ol>
+<li><p>先建立好 AutoUpdater.xml 後面會用到，建立的內容這邊引用官方範例 後續再詳細說明</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">item</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!--版本號 必須大於本機版本 才會有作用--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.0.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!--打包好的更新檔--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">url</span>&gt;</span>https://rbsoft.org/downloads/AutoUpdaterTest.zip<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!--你想顯示在更新畫面內的更新資訊--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">changelog</span>&gt;</span>https://github.com/ravibpatel/AutoUpdater.NET/releases<span class="tag">&lt;/<span class="name">changelog</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!--如果不想要給使用者跳過 就設定為true--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">mandatory</span>&gt;</span>false<span class="tag">&lt;/<span class="name">mandatory</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+<li><p>接著在你的APP進入端加入</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> AutoUpdaterDotNET;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>放到OnStartup，反正一開始就要檢查的</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">AutoUpdater.Mandatory = <span class="literal">true</span>;</span><br><span class="line">AutoUpdater.TopMost = <span class="literal">true</span>;</span><br><span class="line">AutoUpdater.ShowRemindLaterButton = <span class="literal">false</span>;</span><br><span class="line">AutoUpdater.Start(<span class="string">&quot;https://yourURL/AutoUpdater.xml&quot;</span>);</span><br><span class="line">AutoUpdater.ApplicationExitEvent += AutoUpdater_ApplicationExitEvent;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>建立AutoUpdater_ApplicationExitEvent 把行為放在裡面</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">AutoUpdater_ApplicationExitEvent</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">string</span> zipPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, <span class="string">&quot;update.zip&quot;</span>);</span><br><span class="line">    <span class="built_in">string</span> extractPath = AppDomain.CurrentDomain.BaseDirectory;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 解壓縮zip文件</span></span><br><span class="line">    <span class="keyword">using</span> (ZipArchive archive = ZipFile.OpenRead(zipPath))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">foreach</span> (ZipArchiveEntry entry <span class="keyword">in</span> archive.Entries)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 計算解壓縮路徑</span></span><br><span class="line">            <span class="built_in">string</span> destinationPath = Path.GetFullPath(Path.Combine(extractPath, entry.FullName));</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 確保路徑在目標目錄內，以避免路徑遍歷漏洞</span></span><br><span class="line">            <span class="keyword">if</span> (!destinationPath.StartsWith(extractPath, StringComparison.Ordinal))</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> InvalidOperationException(<span class="string">&quot;嘗試解壓縮到無效的目錄&quot;</span>);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 判斷是否為目錄</span></span><br><span class="line">            <span class="keyword">if</span> (Path.GetFileName(destinationPath).Length == <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 這是一個目錄</span></span><br><span class="line">                Directory.CreateDirectory(destinationPath);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 這是一個文件</span></span><br><span class="line">                Directory.CreateDirectory(Path.GetDirectoryName(destinationPath));</span><br><span class="line">                entry.ExtractToFile(destinationPath, <span class="literal">true</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 刪除下載的zip文件</span></span><br><span class="line">    File.Delete(zipPath);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 重新啟動應用程式</span></span><br><span class="line">    System.Diagnostics.Process.Start(System.Windows.Application.ResourceAssembly.Location);</span><br><span class="line">    System.Windows.Application.Current.Shutdown();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>這樣就完成一個基本的套用流程啦，或者你可以放在一個button內 都好</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Programing/" rel="tag"># Programing</a>
+              <a href="/tags/C/" rel="tag"># C#</a>
+              <a href="/tags/Azure/" rel="tag"># Azure</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/07/02/GIRMAY-Biniam/" rel="prev" title="Tour De France 2024 stage 3 GIRMAY Biniam">
+                  <i class="fa fa-angle-left"></i> Tour De France 2024 stage 3 GIRMAY Biniam
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Jeremy Wen</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="Word count total">3k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">12 mins.</span>
+  </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"www-jeremywen-com","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
+
+</body>
+</html>
